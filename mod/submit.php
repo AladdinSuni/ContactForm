@@ -42,7 +42,6 @@ try {
       ));
     } else {
       throw new Exception('Message coild not be sent');
-      
     }
   } else {
     throw new Exception('Please fill in the missing items');

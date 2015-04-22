@@ -1,7 +1,7 @@
 function templateObject() {
   "use strict";
-  var formIdentity = '#formContact';
-  var formUrl = 'mod/submit.php';
+  var _formIdentity = '#formContact';
+  var _formUrl = 'mod/submit.php';
 
   function _wrapValidation(message){
     "use strict";
@@ -29,7 +29,7 @@ function templateObject() {
     "use strict"; 
     $.each(thisForm.find('.custum.dropdown'),function(){
       $(this).find('ul li').removeClass('selected');
-      $(this).find('a.current').html($(this).find('ul li:frist-child').text());
+      $(this).find('a.current').html($(this).find('ul li:first-child').text());
     });
   }
 
@@ -50,7 +50,7 @@ function templateObject() {
       var thisForm = $(this);
       var thisArray = thisForm.serializeArray();
 
-      $.post(_formUrl, thisArrat, function(data){
+      $.post(_formUrl, thisArray, function(data){
         if(data){
          if(!data.error){
             _clearFormValidation(thisForm);
@@ -73,8 +73,8 @@ function templateObject() {
     });
   }
 
-  $function() {
+  $(function() {
     var templateObj = new templateObject();
     templateObj.init();
-  }
+  });
 }

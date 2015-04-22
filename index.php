@@ -51,7 +51,6 @@
   </form>
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/foundation/foundation.js"></script>
-  <script src="js/foundation/foundation.alert.js"></script>
   <script src="js/core.js"></script>
 </body>
 </html>
